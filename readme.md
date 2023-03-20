@@ -88,15 +88,41 @@ Redes | 	No | 	Sí | 	Sí | 	Sí
 #### Línea del tiempo de AWS
 Hace veinte años nació esta promesa tecnológica y en la actualidad ¡tiene clientes en más de 245 países y territorios!
 
-2002 → Se lanza internamente la plataforma
-2003 → Comienza a comercializarse la idea de AWS
-2004 → Llega al público el servicio SQS
-2006 → Vuelve a lanzarse al público SQS, S3 y EC2
-2007 → Abren operaciones en Europa
-2009 → Lanzan el servicio RDS (Relational Database)
-2010 → Sale al mercado el servicio Route 53
-2012 → Lanzan DynamoDB (una base de datos no relacional)
+- 2002 → Se lanza internamente la plataforma
+- 2003 → Comienza a comercializarse la idea de AWS
+- 2004 → Llega al público el servicio SQS
+- 2006 → Vuelve a lanzarse al público SQS, S3 y EC2
+- 2007 → Abren operaciones en Europa
+- 2009 → Lanzan el servicio RDS (Relational Database)
+- 2010 → Sale al mercado el servicio Route 53
+- 2012 → Lanzan DynamoDB (una base de datos no relacional)
 
+
+#### Una visión global: regiones y zonas de disponibilidad
+La infraestructura de AWS está compuesta por regiones, zonas de disponibilidad, data centers y puntos de presencia. Además, se distribuye en diferentes regiones alrededor del mundo. Algunas de ellas son Ohio, Oregon, Norte de California, e incluso lugares exclusivos del gobierno de EE. UU. como GovCloud Este.
+
+Si quieres conocer una lista completa con más sitios, puedes visitar esta https://aws.amazon.com/es/about-aws/global-infrastructure/?p=ngi&loc=0.
+
+##### Cómo escoger una región de AWS
+Podemos escoger la región de nuestra aplicación basada en distintos aspectos que mencionaremos a continuación.
+- El cumplimiento de los requisitos legales y de gobernanza de datos, pues los datos nunca abandonan una región sin su permiso explícito
+
+- La proximidad con los clientes porque lanzan en una región cercana en donde estén para reducir latencia. Puedes revisar esta característica desde tu ubicación a cada región en cloudping.info.
+
+> Los servicios disponibles dentro de una región debido a que muchos no funcionan en todas partes. Algunos servicios globales o regionales son…
+
+##### Globales
+- IAM
+- Route 53
+- Cloudfront
+- WAF
+##### Regionales
+- EC2
+- Beanstalk
+- Lambda
+- Rekognition
+
+CLOUD PING test https://cloudpingtest.com/aws, https://www.cloudping.info/ 
 ## Configuration Budget in AWS
 <https://console.aws.amazon.com/billing/home#/account>
 
