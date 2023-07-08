@@ -9,6 +9,8 @@ Esta tecnología permite acceso instantáneo a los recursos que necesites, así 
 
 A continuación, conocerás las distintas plataformas en la nube que utilizamos cuando trabajamos en proyectos personales o en nuestra empresa.
 
+  ![Cloud](./clouds.png)
+
 - Nube pública
   La nube pública se refiere a los recursos de proveedores que utilizamos a través de internet y algunos ejemplos son Google Cloud Platform (GCP), Azure y AWS.
 
@@ -17,19 +19,28 @@ A continuación, conocerás las distintas plataformas en la nube que utilizamos 
   Elimina los gastos de capital comercial (CapEx) y reduce el gasto operativo (OpEx).
   Reduce los precios en economías de escala
   Despliega aplicaciones a nivel global en cuestión de minutos
+
 - Nube privada
   La nube privada es un servicio empleado por una organización que no está abierto al público. Permite un control total de la infraestructura y es útil para aplicaciones con requerimientos específicos de seguridad o comerciales.
+    - Puede ser en la nube pero con de forma privada tal como Metal Servers(IBM) o AWS Outposts
 
 - Nube híbrida
   La nube híbrida consiste en mantener nuestra infraestructura y extender sus capacidades mediante la nube pública. Posibilita el control sobre activos sensibles en tu infraestructura privada, aprovechando la flexibilidad y rentabilidad de la nube pública.
 
+  ![Cloud](./marker.png)
 
-#### Características de la computación en la nube
+
+#### Características de la computación en la nube 
+![Alt text](comparative.png)
   Ahora que conoces los distintos modelos de tecnología en la nube, es importante que hablar sobre sus propiedades de computación.
 
   - Este modelo genera un autoservicio en demanda (con registros en la plataforma ya se pueden proveer recursos)
   - Tiene un amplio acceso a la red
   - Proporciona un espacio donde los clientes pueden compartir infraestructura y recursos de manera segura
+  - Enables companies to consume a compuute resources, such as severs, storage or an applicatio, ad utility like wate or electricity, rather than having to build and maintain computing infraestructuresin house
+
+  - Cloud computing is the delivery of computing services: server, storage, databse, networking, tools, and software over the internet
+
 
 
 #### Problemas resueltos por la nube
@@ -53,6 +64,7 @@ La infraestructura como servicio (IAAS) proporciona componentes básicos de IT e
     - Linode
     - Digital ocean
     - S2 AWS
+    - EC2 
 #### Platform as a Service (PAAS)
 
 Los modelos que ofrecen una plataforma como servicio (PAAS) eliminan la necesidad de que administremos la infraestructura y proveen una plataforma para gestionar aplicaciones.
@@ -60,6 +72,7 @@ Los modelos que ofrecen una plataforma como servicio (PAAS) eliminan la necesida
   - Heroku
   - Google App Engine
   - AWS Elastic Beanstalk
+
 #### Software as a Service (SAAS)
 El Software como servicio (SAAS) brinda un producto de software terminado que es ejecutado y administrado por el proveedor del servicio.
 
@@ -77,13 +90,20 @@ Componente|  On-premises	| IAAS	| PAAS	| SAAS
 --- | --- | --- | --- |---
 Aplicaciones	| No	| No | 	No | 	Sí
 Data	|	No	|	No	|	No	| Sí
-Runtime	| No | 	No | 	Sí | 	Sí
+Runtime (Entonrno de ejecución como JRE)	| No | 	No | 	Sí | 	Sí
 Middleware | 	No | 	No | 	Sí | 	Sí
 O/S | 	No | 	No | 	Sí | 	Sí
 Virtualización | 	No | 	Sí | 	Sí | 	Sí
 Servidores | 	No | 	Sí | 	Sí | 	Sí
 Almacenamiento | 	No | 	Sí | 	Sí | 	Sí
 Redes | 	No | 	Sí | 	Sí | 	Sí
+
+##### middleware 
+Middleware es software que se sitúa entre un sistema operativo y las aplicaciones que se ejecutan en él. Básicamente, funciona como una capa de traducción oculta para permitir la comunicación y la administración de datos en aplicaciones distribuidas. A veces, se le denomina “plumbing” (tuberías), porque conecta dos aplicaciones para que se puedan pasar fácilmente datos y bases de datos por una “canalización”.
+
+##### middleware 
+Middleware es software que se sitúa entre un sistema operativo y las aplicaciones que se ejecutan en él. Básicamente, funciona como una capa de traducción oculta para permitir la comunicación y la administración de datos en aplicaciones distribuidas. A veces, se le denomina “plumbing” (tuberías), porque conecta dos aplicaciones para que se puedan pasar fácilmente datos y bases de datos por una “canalización”. 
+
 
 #### Línea del tiempo de AWS
 Hace veinte años nació esta promesa tecnológica y en la actualidad ¡tiene clientes en más de 245 países y territorios!
@@ -104,10 +124,22 @@ La infraestructura de AWS está compuesta por regiones, zonas de disponibilidad,
 Si quieres conocer una lista completa con más sitios, puedes visitar esta https://aws.amazon.com/es/about-aws/global-infrastructure/?p=ngi&loc=0.
 
 ##### Cómo escoger una región de AWS
+
+[Regions](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
+
+[Verify Service-Region Status](https://health.aws.amazon.com/phd/status)
+
 Podemos escoger la región de nuestra aplicación basada en distintos aspectos que mencionaremos a continuación.
-- El cumplimiento de los requisitos legales y de gobernanza de datos, pues los datos nunca abandonan una región sin su permiso explícito
+
+- El cumplimiento de los requisitos legales y de gobernanza de datos, pues los datos nunca abandonan una región sin su permiso explícito (Compliance)
 
 - La proximidad con los clientes porque lanzan en una región cercana en donde estén para reducir latencia. Puedes revisar esta característica desde tu ubicación a cada región en cloudping.info.
+
+- Costos por region, hay regiones más caras, podemos saber los gastos con [AWS Pricing calculator](https://calculator.aws/#/)
+
+- Existen pares de región en caso de que una region falle puedo configurar otra, pero esto es muy distinto a las zonas de disponibilidad
+![Alt text](zones.png)
+
 
 > Los servicios disponibles dentro de una región debido a que muchos no funcionan en todas partes. Algunos servicios globales o regionales son…
 
@@ -123,6 +155,9 @@ Podemos escoger la región de nuestra aplicación basada en distintos aspectos q
 - Rekognition
 
 CLOUD PING test https://cloudpingtest.com/aws, https://www.cloudping.info/ 
+
+[AWS Latency Test](https://www.awsspeedtest.com/latency)
+
 ## Configuration Budget in AWS
 <https://console.aws.amazon.com/billing/home#/account>
 
@@ -221,7 +256,7 @@ password=get_secret_value['SecretString']
 ```
 También nos permite compartir automáticamente esta información cuando queramos. Además, este servicio evita que tengamos que copiar y pegar los secretos directamente en nuestro código. `
 También nos permite compartir automáticamente esta información cuando queramos. Además, este servicio evita que tengamos que copiar y pegar los secretos directamente en nuestro código.
-## EC2
+## EC2 (IaaS)
 
 Elastic computing cloud
 
@@ -408,3 +443,18 @@ Instancias dedicadas:
 - Software and utilities on EC2 instances
 - IAM functions assigned to users EC2-IAM
 Más información sobre el Shared Responsibility Model <https://aws.amazon.com/compliance/shared-responsibility-model/>
+
+## CLOUDWATCH to create an alarm
+GO to CLOUDWATCH> Alarm > Bills to create an alarm
+
+Then to create an 
+
+
+## Create alarm for services 
+
+Account>Cost management
+
+
+
+## SNS Envio de correos/notificaciones
+## ARN AMAZON RESOURCE NAME
