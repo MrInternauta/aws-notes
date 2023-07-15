@@ -458,3 +458,98 @@ Account>Cost management
 
 ## SNS Envio de correos/notificaciones
 ## ARN AMAZON RESOURCE NAME
+
+
+# Introduction to DEVOPS
+![Alt text](devops.png)
+- Lifecycle Plan: Jira, trello
+- Lifecycle Code: Git, gitlab, github, bitbucket
+- Lifecycle Build: Maven, Docker, Gradle
+- Lifecycle Test: Sonnaq, Junit, Selenium, Jest, Postman, Swagger - Reducir los riesgos asociados
+- Lifecycle Release: TraviS ci, bamboo, jenkins, gitlab, github
+- Lifecycle Deploy: IaaS (TERRAFORM)- AWS puppet kubernetes, ansible, google cloud platform
+- Lifecycle Operate: Puppet, AWS, google cloud platform, Azure
+- Lifecycle Monitor: Puppet, AWS, google cloud platform, Azure
+
+
+
+
+## Devops Model
+![Alt text](devmodel.png)
+
+- It's quickly, easily, repeatedly and safely moves the software from Developers infrastructure to production infrastructure
+- DevOPs Solve drawbacks of both waterfall and agile process
+
+![Alt text](devbenefit.png)
+- No es necesarios tener encendido los ambientes de DEV y QA, siempre
+- Se deben crear caracteristicas para autodestrucción
+
+## Overview of all three model
+![Alt text](image-1.png)
+
+![Alt text](image-2.png)
+
+GIT FLOW
+![Alt text](image-3.png)
+
+![Alt text](image-4.png)
+![Alt text](image-5.png)
+![Alt text](image-6.png)
+![Alt text](image-7.png)
+![Alt text](image-8.png)
+Se parte apartir del codigo con, AWS codecommit posteriormente, se realiza el build con AWS Code Build, con codePipelines es el orquestador como Jenkins, testing es una herramienta de terceros, para hacer un release se debe usar codedeploy
+
+cloudtrail
+couldformation
+opsworks
+
+## Connect AWS por CLI
+
+Open an SSH client.
+
+Locate your private key file. The key used to launch this instance is ubuntu_2023.pem
+
+Run this command, if necessary, to ensure your key is not publicly viewable.
+ chmod 400 ubuntu_2023.pem
+
+Connect to your instance using its Public DNS:
+ ec2-3-84-232-46.compute-1.amazonaws.com
+
+Example:
+
+ ssh -i "ubuntu_2023.pem" ubuntu@ec2-3-84-232-46.compute-1.amazonaws.com
+
+ ## Install AWS CLI
+[aws]( https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+Code for ubuntu
+ `curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install`
+
+NOw you can run
+`/usr/local/bin/aws --version`
+
+COnnect IAM 
+![Alt text](image-9.png)
+`aws s3 ls`
+
+Clone repo
+
+`git clone https://github.com/aws-samples/aws-nodejs-sample`
+
+Install node 
+`
+# install Volta
+curl https://get.volta.sh | bash
+
+# install Node
+volta install node
+
+# start using Node
+node
+`
+Execute
+` npm i`
+Execute
+` node sample`
