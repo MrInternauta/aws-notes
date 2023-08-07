@@ -699,9 +699,14 @@ https://aws.amazon.com/codebuild/?nc=sn&loc=0
   - Create EC2 (allow HTTP AND HTTPS)
   - ![Alt text](image-30.png)
   - ![Alt text](image-31.png)
+
   - ## Update System
     - `sudo yum update -y`
     - `sudo yum install -y ruby wget`
+
+  - ## Update ubuntu
+    - `sudo apt-get update -y`
+    - `sudo apt-get install -y ruby wget`
   - ## [Code deploy agent for Linux](https://gist.github.com/rfajarachmad/c45386829fbdd8a7ae6b40cb47fc1111)
 
 
@@ -732,7 +737,13 @@ sudo ./install auto
 ## aws-codedeploy-sa-east-1 for instances in the South America (São Paulo) region
 
 sudo service codedeploy-agent status
-```    - Example`wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install` - `chmod +x ./install` - `sudo ./install auto` - `sudo service codedeploy-agent status`
+
+- Example `wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install`
+ - `chmod +x ./install` 
+ - `sudo ./install auto`
+  - `sudo service codedeploy-agent status`
+
+```    
 
 - ## Create role for codeDeploy
   ![Alt text](image-32.png)
@@ -910,3 +921,37 @@ resource "aws_codecommit_repository" "test" {
 - validate
 - plan
 - apply
+
+
+### CLOUD Watch
+- servicios y apps
+- metricas nuevas
+- sdk
+- consola
+#### stress
+sudo amazon-linux-extras install epel -y
+sudo yum install stress -y
+sudo stress --cpu 8
+
+![Alt text](image-68.png)
+![Alt text](image-69.png)
+
+
+![alt](image-70.png)
+
+![Alt text](image-72.png)
+
+### reglAS
+![Alt text](image-73.png)
+
+### CLOUD TAIL
+https://us-east-1.console.aws.amazon.com/cloudtrail/home
+- Temas de cumplimiento
+- creado al al iniciar la cuenta (se crea por defecto y da los primero 7 días)
+- Historial de eventos (a nivel de usuario), saber que hace cada usuario
+![Alt text](image-74.png)
+![Alt text](image-75.png)
+![Alt text](image-76.png)
+
+![Alt text](image-77.png)
+![Alt text](image-78.png)
