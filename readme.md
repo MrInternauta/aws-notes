@@ -955,3 +955,13 @@ https://us-east-1.console.aws.amazon.com/cloudtrail/home
 
 ![Alt text](image-77.png)
 ![Alt text](image-78.png)
+
+## Docker
+![Alt text](image-79.png)
+![Alt text](image-80.png)
+
+## Container Management Tools and High Avalilability
+![Alt text](<Screenshot from 2023-08-18 18-17-16.png>)
+![Alt text](<Screenshot from 2023-08-18 18-18-27.png>)
+![Alt text](<Screenshot from 2023-08-18 18-27-58.png>)
+![Alt text](image-81.png)Pz
